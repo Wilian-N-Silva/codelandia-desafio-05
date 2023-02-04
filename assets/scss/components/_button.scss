@@ -1,0 +1,53 @@
+.button {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  height: 45px;
+  width: 225px;
+  cursor: pointer;
+  color: $white;
+  font: $button;
+  text-transform: uppercase;
+  background-color: transparent;
+  gap: 10px;
+  transition: $default-transition-time;
+}
+
+.button:hover {
+  transform: $default-scale;
+}
+
+.button::after {
+  content: "";
+  z-index: -1;
+  width: 100%;
+  position: absolute;
+  height: 100%;
+  transform: skew(-22deg);
+  transition: $secondary-transition-time;
+}
+
+.button.button-primary::after {
+  background-color: $green;
+  border: 2px solid $green;
+}
+
+.button.button-secondary{
+  display: none;
+  @include screen-lg {
+    display: flex;
+  }
+}
+
+.button.button-secondary::after {
+  background-color: transparent;
+  border: 2px solid $green;
+  
+}
+
+.button.button-secondary:hover::after {
+  background-color: $green;
+}

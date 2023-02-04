@@ -1,0 +1,67 @@
+.content {
+  height: 100%;
+  display: flex;
+  align-items: center;
+
+  &-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    @include screen-lg {
+      flex-direction: row-reverse;
+    }
+
+    &-info-image {
+      width: 100%;
+      max-width: 500px;
+    }
+
+    &-info {
+      display: flex;
+      flex-direction: column;
+      gap: 46px;
+      max-height: 445px;
+      justify-content: space-between;
+
+      @include screen-lg {
+        gap: 58px;
+      }
+
+      &-heading {
+        & span {
+          font: $heading-2;
+          letter-spacing: 0.03rem;
+          margin-bottom: 6px;
+
+          @include screen-lg {
+            margin-bottom: 14px;
+          }
+        }
+
+        & h1 {
+          font: $heading-1;
+          margin-bottom: 16px;
+
+          @include screen-lg {
+            margin-bottom: 25px;
+          }
+        }
+
+        p {
+          font: $body;
+        }
+      }
+
+      &-description {
+        &-button-list {
+          display: flex;
+          gap: 16px;
+          flex-direction: row;
+        }
+      }
+    }
+
+  }
+}

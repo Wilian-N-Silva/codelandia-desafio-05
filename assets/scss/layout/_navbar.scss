@@ -1,0 +1,35 @@
+.navigation {
+  padding-top: 14px;
+
+  @include screen-lg {
+    padding-top: 41px;
+  }
+
+  &-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &-brand {
+      width: 100px;
+    }
+
+    &-social {
+      display: flex;
+      gap: 29px;
+
+      a {
+        width: 20px;
+        transition: $default-transition-time;
+
+        &:hover {
+          transform: $default-scale;
+        }
+      }
+
+      @include screen-lg {
+        gap: 25px;
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+.container {
+  margin: 0 auto;
+  height: auto;
+  width: 100%;
+  max-width: $max-width;
+
+  @include screen-lg {
+    max-width: $max-width-lg;
+  }
+}
